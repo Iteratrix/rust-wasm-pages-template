@@ -21,6 +21,8 @@ concurrency:
 
 jobs:
   build:
+    # Skip on the template repo itself (placeholder crates don't build)
+    if: github.repository != 'Iteratrix/rust-wasm-pages-template'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6

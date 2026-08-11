@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{project-name}}</title>
+<meta name="description" content="{{project-name}}: runs entirely in your browser - nothing is uploaded anywhere.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1>{{project-name}}</h1>
+    <p class="tagline">Everything runs locally in your browser &mdash; your file never
+    leaves your machine.</p>
+  </header>
+
+  <section id="drop-zone" class="drop-zone" tabindex="0" role="button"
+           aria-label="Open a file">
+    <p><strong>Drop a file here</strong> or click to browse</p>
+  </section>
+
+  <section id="result" hidden>
+    <h2 id="file-name"></h2>
+    <pre id="output"></pre>
+  </section>
+
+  <footer>
+    <p>Built from <a href="https://github.com/Iteratrix/rust-wasm-pages-template">rust-wasm-pages-template</a>.</p>
+  </footer>
+</main>
+<input id="file-input" type="file" hidden>
+<script type="module" src="app.js"></script>
+</body>
+</html>

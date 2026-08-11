@@ -1,0 +1,14 @@
+[package]
+name = "{{project-name}}-cli"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "{{project-name}}"
+path = "src/main.rs"
+
+[dependencies]
+{{project-name}}-core = { path = "../{{project-name}}-core" }
+
+[lints]
+workspace = true

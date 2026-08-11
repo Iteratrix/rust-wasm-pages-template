@@ -1,0 +1,11 @@
+[template]
+cargo_generate_version = ">=0.19.0"
+exclude = ["LICENSE"]
+
+[placeholders.cli]
+type = "bool"
+prompt = "Include a CLI crate? (nearly free, doubles as a test harness)"
+default = true
+
+[conditional.'cli == false']
+ignore = ["{{project-name}}-cli"]
